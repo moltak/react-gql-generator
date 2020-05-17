@@ -1,6 +1,6 @@
-# gql-generator
+# react-gql-generator
 
-Generate queries from graphql schema, used for writing api test.
+Generate queries from graphql schema, used for writing apollo, react.js.
 
 ## Example
 ```gql
@@ -18,21 +18,25 @@ type User {
 ```
 
 ```gql
+import gql from 'graphql-tag';
+
 # Sample query generated
-query user($id: Int!) {
-  user(id: $id){
-    id
-    username
-    email
-    createdAt
+const user = gql`
+  query user($id: Int!) {
+    user(id: $id){
+      id
+      username
+      email
+      createdAt
+    }
   }
-}
+`
 ```
 
 ## Usage
 ```bash
 # Install
-npm install gql-generator -g
+npm install react-gql-generator -g
 
 # see the usage
 gqlg --help
