@@ -1,13 +1,6 @@
 {
-    "extends": ["airbnb-base"],
+    "extends": ["prettier"],
     "rules": {
-      "no-console": "off",
-      "global-require": "off",
-      "no-plusplus": "off",
-      "no-param-reassign": "warn"
-    },
-    "env": {
-      "mocha": true
+        "import/no-unresolved": [2, {"commonjs": true, "amd": true}]
     }
 }
-  
